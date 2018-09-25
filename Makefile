@@ -12,8 +12,8 @@ BOOST_PATH ?= /usr/local/
 # GPU environment settings               #
 #----------------------------------------------#
 
-GPU_ARCH=compute_35
-GPU_CODE=sm_35
+GPU_ARCH=compute_60
+GPU_CODE=sm_60
 
 #----------------------------------------------#
 # Mode               		          #
@@ -159,7 +159,7 @@ ghostz: $(OBJS)
 
 %.o: %.cpp
 	$(CXX) -c $(CXXFLAGS) $< -o $@  $(INCLUDES)
-	
+
 %.o: %.cu
 	$(NVCC) -c $(NVCCFLAGS) $< -o $@  $(INCLUDES)
 
